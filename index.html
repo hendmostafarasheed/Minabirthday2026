@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#fff1e2"><title>عيد ميلاد مينا فؤاد مرقص</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="fireworks" aria-hidden="true"></canvas>
+<div class="sparkles" aria-hidden="true">✦　✧　✦　♡　✧　✦</div>
+<audio id="birthdayMusic" src="birthday-song.mp3" preload="auto" loop></audio>
+<main class="wrap">
+<section id="cover" class="page cover">
+  <div class="garland">🎈 ✦ 🎁 ✦ 🎈</div>
+  <div class="eyebrow">YOU'RE INVITED!</div>
+  <h1>Happy<br><span>Birthday</span></h1>
+  <h2>مينا فؤاد مرقص</h2>
+  <p class="intro">يلا نحتفل ونفرح سوا! 🎉<br>مستنيك تشاركني أحلى يوم</p>
+  <div class="decor">🎂　🎁　🎈</div>
+  <button id="openBtn" class="open-btn">🎁 افتح الدعوة</button>
+  <small>اضغط هنا عشان تشوف المفاجأة</small>
+</section>
+<section id="reveal" class="reveal hidden" aria-hidden="true">
+  <div class="portrait-frame"><img src="mina-cartoon.jpg" alt="صورة كرتونية لمينا"></div>
+  <p>🎉 المفاجأة! 🎉</p>
+</section>
+<section id="details" class="page details hidden" aria-hidden="true">
+  <div class="top-ribbon">🎈 حفلة عيد ميلاد 🎈</div>
+  <p class="welcome">أهلاً وسهلاً بيك في يومي المميز</p>
+  <h2>مينا فؤاد مرقص</h2>
+  <p>يشرفني حضورك معايا في حفلة عيد ميلادي ❤️</p>
+  <div class="info-grid">
+    <div class="info"><span>📅</span><small>اليوم والتاريخ</small><b>الجمعة ٦ نوفمبر ٢٠٢٦</b></div>
+    <div class="info"><span>⏰</span><small>الساعة</small><b>٥:٠٠ مساءً</b></div>
+    <div class="info wide"><span>📍</span><small>مكان الاحتفال</small><b>قاعة جرين لاند – مدينة نصر، القاهرة</b></div>
+  </div>
+  <div class="actions">
+    <a class="action" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=%D9%82%D8%A7%D8%B9%D8%A9%20%D8%AC%D8%B1%D9%8A%D9%86%20%D9%84%D8%A7%D9%86%D8%AF%20%D9%85%D8%AF%D9%8A%D9%86%D8%A9%20%D9%86%D8%B5%D8%B1%20%D8%A7%D9%84%D9%82%D8%A7%D9%87%D8%B1%D8%A9">📍 اللوكيشن</a>
+    <button id="rsvpBtn" class="action">💌 تأكيد الحضور</button>
+    <button id="shareBtn" class="action">🔗 مشاركة الدعوة</button>
+    <button id="photosBtn" class="action">📸 صور الحفلة</button>
+  </div>
+  <p class="closing">وجودك هيخلّي اليوم أحلى بكتير! ❤️</p>
+  <button id="backBtn" class="back">↩ رجوع للغلاف</button>
+</section>
+</main>
+<div id="toast" class="toast" role="status"></div>
+<script src="script.js"></script>
+</body></html>

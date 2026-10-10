@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Baloo+2:wght@600;700;800&display=swap');
+:root{--peach:#fff0df;--red:#d9272e;--red2:#a81622;--ink:#76251f}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;display:flex;justify-content:center;align-items:center;padding:18px;background:radial-gradient(ellipse at top,#fffaf2 0,#fff0df 55%,#ffe5cb 100%);font-family:Cairo,sans-serif;color:var(--ink);overflow-x:hidden}
+body:before,body:after{content:"";position:fixed;width:220px;height:220px;border-radius:50%;background:#fff9;filter:blur(30px);pointer-events:none}body:before{top:-80px;left:-80px}body:after{right:-80px;bottom:-90px}
+.wrap{width:min(100%,600px);position:relative;z-index:1}.page{position:relative;text-align:center;overflow:hidden;padding:clamp(25px,6vw,44px);border:2px solid #fff;border-radius:30px;background:linear-gradient(150deg,#fffdf8,#fff0df);box-shadow:0 20px 55px #a7462222,inset 0 0 0 7px #fff7}.page:before{content:"";position:absolute;inset:11px;border:1px dashed #e9a49a;border-radius:21px;pointer-events:none}
+.cover{min-height:650px;display:flex;flex-direction:column;justify-content:center;align-items:center}.garland{font-size:34px;margin-bottom:14px}.eyebrow{font:800 17px 'Baloo 2',sans-serif;letter-spacing:4px;color:var(--red)}
+h1{font:800 clamp(60px,13vw,90px)/.82 'Baloo 2',sans-serif;color:var(--red);margin:14px 0 24px;text-shadow:2px 4px #ffd8bf}h1 span{color:white;-webkit-text-stroke:2px var(--red);text-shadow:3px 4px #f4b9a0}
+h2{font-size:clamp(29px,7vw,42px);color:var(--red2);margin:12px 0;font-weight:900}.intro{font-size:18px;font-weight:700;line-height:1.9}.decor{font-size:48px;margin:20px 0 26px;animation:bob 3s infinite ease-in-out}
+.open-btn{position:relative;z-index:2;border:3px solid white;border-radius:50px;padding:15px 35px;background:linear-gradient(#f34d43,#c91825);color:white;font:900 22px Cairo;box-shadow:0 7px 0 #9e1620,0 12px 25px #c83a2d33;cursor:pointer}.cover small{margin-top:19px;opacity:.7}
+.hidden{display:none!important}.reveal{text-align:center;animation:appear .4s ease both}.portrait-frame{width:min(75vw,330px);aspect-ratio:1/1.08;margin:auto;border:7px solid white;border-radius:48% 48% 42% 42%;overflow:hidden;background:#fff4e8;box-shadow:0 12px 38px #a7472030}.portrait-frame img{width:100%;height:100%;object-fit:cover}.reveal p{font-size:24px;font-weight:900;color:var(--red);margin:16px}
+.details{animation:appear .6s ease both}.top-ribbon{display:inline-block;background:var(--red);color:white;padding:8px 24px;border-radius:0 0 18px 18px;margin-top:-28px;font-weight:900}.welcome{margin-top:26px;font-weight:700}.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:22px 0}.info{padding:14px 8px;background:#fff9f2;border:1px solid #ffd0b2;border-radius:17px;box-shadow:0 5px 12px #a7472010}.info.wide{grid-column:1/-1}.info span{display:block;font-size:26px}.info small{display:block;color:#a64231}.info b{display:block;font-size:15px;margin-top:4px}.actions{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}.action{display:flex;align-items:center;justify-content:center;gap:7px;min-height:62px;padding:10px;border:2px solid white;border-radius:17px;background:linear-gradient(145deg,#fff,#ffe5d0);color:var(--red2);font:800 15px Cairo;text-decoration:none;cursor:pointer;box-shadow:0 5px 0 #e7b095;transition:transform .15s}.action:hover{transform:translateY(-3px)}.closing{font-size:18px;font-weight:900;color:var(--red2);margin:25px 0 8px}.back{border:0;background:transparent;color:#a64a37;text-decoration:underline;font:700 15px Cairo;cursor:pointer}.toast{position:fixed;bottom:20px;left:50%;transform:translate(-50%,20px);opacity:0;background:#7d211d;color:white;padding:12px 18px;border-radius:14px;z-index:5;transition:.25s;max-width:90vw;text-align:center}.toast.show{opacity:1;transform:translate(-50%,0)}
+@keyframes appear{from{opacity:0;transform:scale(.92);filter:blur(7px)}to{opacity:1;transform:scale(1);filter:blur(0)}}@keyframes bob{50%{transform:translateY(-8px)}}@media(max-width:450px){body{padding:10px}.cover{min-height:590px}.page{padding:25px 17px}.action{font-size:13px}.info b{font-size:13px}}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+#fireworks{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:4;display:none}
+body.celebrating #fireworks{display:block}
+
+/* Mobile polish: prevent English title overlap and make the cover fit phone screens. */
+.cover h1{width:100%;font-size:clamp(48px,12vw,82px);line-height:.98;letter-spacing:-1.5px;overflow-wrap:normal;word-break:normal;margin:12px 0 20px}
+.cover h1 span{display:block;margin-top:5px;-webkit-text-stroke:1.5px var(--red)}
+.cover h2{line-height:1.45;max-width:100%;overflow-wrap:anywhere}
+.cover .intro{font-size:clamp(16px,4.3vw,19px);line-height:1.85}
+.cover .decor{font-size:clamp(34px,10vw,48px);margin:16px 0 22px}
+.cover{min-height:0;padding-top:36px;padding-bottom:34px}
+@media(max-width:480px){
+  body{padding:10px}
+  .page{padding:26px 17px}
+  .cover h1{font-size:clamp(43px,11.5vw,62px);letter-spacing:-1.8px;line-height:1.02}
+  .cover h2{font-size:clamp(25px,7vw,34px);margin:15px 0}
+  .cover .garland{font-size:29px;letter-spacing:2px}
+  .cover .eyebrow{font-size:14px;letter-spacing:3px}
+  .cover .open-btn{font-size:20px;padding:13px 25px;max-width:100%}
+}
